@@ -29,3 +29,7 @@ def part2 (fileStr : String) := Id.run do
     let occurrences := freq.get! l
     similarity := similarity + (occurrences * l)
   similarity
+
+#eval do
+  let file ← IO.FS.readFile "inputs/day1.txt"
+  return part1 file
